@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Faculty {
-    private String facultyName;
 
+    private String facultyName;
     private double costForCredit;
     private List<Subject> subjects;
 
@@ -52,11 +52,28 @@ public class Faculty {
 
     @Override
     public String toString() {
-        return "Faculty{" +
-                "facultyName='" + facultyName + '\'' +
-                ", costForCredit=" + costForCredit +
-                ", subjects=" + subjects +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Faculty{")
+                .append("facultyName='").append(facultyName).append('\'')
+                .append(", costForCredit=").append(costForCredit)
+                .append(", subjects=").append(subjects != null ? subjectsToString() : "null")
+                .append('}');
+        return sb.toString();
+    }
+
+    private String subjectsToString() {
+        if (subjects == null) {
+            return "null";
+        }
+        StringBuilder sb = new StringBuilder("[");
+        for (int i = 0; i < subjects.size(); i++) {
+            sb.append(subjects.get(i) != null ? subjects.get(i).toString() : "null");
+            if (i < subjects.size() - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append(']');
+        return sb.toString();
     }
 
 }

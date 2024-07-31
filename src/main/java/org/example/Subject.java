@@ -106,16 +106,33 @@ public class Subject {
 
     @Override
     public String toString() {
-        return "Subject{" +
-                "name='" + name + '\'' +
-                ", code='" + code + '\'' +
-                ", credits=" + credits +
-                ", teacher=" + teacher +
-                ", description='" + description + '\'' +
-                ", faculty=" + faculty +
-                ", students=" + students +
-                ", classroom=" + classroom +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Subject{")
+                .append("name='").append(name).append('\'')
+                .append(", code='").append(code).append('\'')
+                .append(", credits=").append(credits)
+                .append(", teacher=").append(teacher != null ? teacher.toString() : "null")
+                .append(", description='").append(description).append('\'')
+                .append(", faculty=").append(faculty != null ? faculty.toString() : "null")
+                .append(", students=").append(students != null ? studentsToString() : "null")
+                .append(", classroom=").append(classroom != null ? classroom.toString() : "null")
+                .append('}');
+        return sb.toString();
+    }
+
+    private String studentsToString() {
+        if (students == null) {
+            return "null";
+        }
+        StringBuilder sb = new StringBuilder("[");
+        for (int i = 0; i < students.size(); i++) {
+            sb.append(students.get(i) != null ? students.get(i).toString() : "null");
+            if (i < students.size() - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append(']');
+        return sb.toString();
     }
 
 

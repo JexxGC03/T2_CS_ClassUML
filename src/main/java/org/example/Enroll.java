@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Enroll {
-    private int ref;
 
+    private int ref;
     private Student student;
     private List<Subject> subjects;
     private double totalAmount;
@@ -81,13 +81,34 @@ public class Enroll {
 
     @Override
     public String toString() {
-        return "Enroll{" +
-                "ref=" + ref +
-                ", student=" + student +
-                ", subjects=" + subjects +
-                ", totalAmount=" + totalAmount +
-                ", date='" + date + '\'' +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Enroll{")
+                .append("ref=").append(ref)
+                .append(", student=").append(student != null ? studentToString() : "null")
+                .append(", subjects=").append(subjects != null ? subjectsToString() : "null")
+                .append(", totalAmount=").append(totalAmount)
+                .append(", date='").append(date).append('\'')
+                .append('}');
+        return sb.toString();
+    }
+
+    private String studentToString() {
+        return student != null ? student.toString() : "null";
+    }
+
+    private String subjectsToString() {
+        if (subjects == null) {
+            return "null";
+        }
+        StringBuilder sb = new StringBuilder("[");
+        for (int i = 0; i < subjects.size(); i++) {
+            sb.append(subjects.get(i) != null ? subjects.get(i).toString() : "null");
+            if (i < subjects.size() - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append(']');
+        return sb.toString();
     }
 
 

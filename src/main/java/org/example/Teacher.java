@@ -63,15 +63,31 @@ public class Teacher {
         }
     }
 
-
     @Override
     public String toString() {
-        return "Teacher{" +
-                "name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", subjects=" + subjects +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Teacher{")
+                .append("name='").append(name).append('\'')
+                .append(", lastName='").append(lastName).append('\'')
+                .append(", email='").append(email).append('\'')
+                .append(", subjects=").append(subjects != null ? subjectsToString() : "null")
+                .append('}');
+        return sb.toString();
+    }
+
+    private String subjectsToString() {
+        if (subjects == null) {
+            return "null";
+        }
+        StringBuilder sb = new StringBuilder("[");
+        for (int i = 0; i < subjects.size(); i++) {
+            sb.append(subjects.get(i) != null ? subjects.get(i).toString() : "null");
+            if (i < subjects.size() - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append(']');
+        return sb.toString();
     }
 
 

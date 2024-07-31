@@ -117,15 +117,16 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", code=" + code +
-                ", email='" + email + '\'' +
-                ", enroll=" + enroll +
-                ", subjects=" + subjects +
-                ", grades=" + grades +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Student{")
+                .append("lastName='").append(lastName).append('\'')
+                .append(", code=").append(code)
+                .append(", email='").append(email).append('\'')
+                .append(", enroll=").append(enroll != null ? enroll.toString() : "null")
+                .append(", subjects=").append(subjects != null ? subjects.toString() : "null")
+                .append(", grades=").append(grades != null ? grades.toString() : "null")
+                .append('}');
+        return sb.toString();
     }
 
 

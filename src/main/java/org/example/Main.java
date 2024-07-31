@@ -30,16 +30,17 @@ public class Main {
 
         enroll1.obtainTotalAmount();
 
-        System.out.println(EngineerFaculty.toString());
-        System.out.println(BasicsSciences.toString());
-        System.out.println(CT10071.toString());
-        System.out.println(CE05003.toString());
-        System.out.println(teacher1.toString());
-        System.out.println(teacher2.toString());
-        System.out.println(student1.toString());
-        System.out.println(student2.toString());
-        System.out.println(cls1.toString());
-        System.out.println(cls2.toString());
-        System.out.println(enroll1.toString());
+
+        System.out.println(EngineerFaculty);
+        System.out.println(BasicsSciences);
+        System.out.println(CT10071);
+        System.out.println(CE05003);
+        System.out.println(teacher1);
+        System.out.println(teacher2);
+        System.out.println(student1);
+        System.out.println(student2);
+        System.out.println(cls1);
+        System.out.println(cls2);
+        System.out.println(enroll1);
     }
 }
