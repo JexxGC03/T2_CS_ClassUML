@@ -11,19 +11,19 @@ public class Classroom {
     private List<Subject> subjects;
 
     // Constructor
-    public Classroom(String nombre, int capacidad, String ubicacion) {
-        this.name = nombre;
-        this.capacity = capacidad;
-        this.ubication = ubicacion;
+    public Classroom(String name, int capacity, String ubication) {
+        this.name = name;
+        this.capacity = capacity;
+        this.ubication = ubication;
         this.subjects = new ArrayList<>();
     }
 
-    // Métodos
-    public void agregarAsignatura(Subject subject) {
+    // Methods
+    public void addSubject(Subject subject) {
         if (subjects.size() < capacity) {
             subjects.add(subject);
         } else {
-            System.out.println("El aula ha alcanzado su capacidad máxima.");
+            System.out.println("The classroom its full");
         }
     }
 
