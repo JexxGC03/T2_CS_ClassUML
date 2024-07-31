@@ -69,8 +69,9 @@ public class Enroll {
     public double obtainTotalAmount() {
         double totalAmount = 0;
         for (Subject subject : subjects) {
-            totalAmount +=
+            totalAmount += subject.getCredits() * obtainCostForCredits(subject);
         }
+        return totalAmount;
     }
 
     private double obtainCostForCredits(Subject subject){
