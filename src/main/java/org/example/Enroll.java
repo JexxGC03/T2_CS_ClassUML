@@ -12,10 +12,10 @@ public class Enroll {
     private String date;
 
     //Constructor
-    public Enroll(int ref, Student student, List<Subject> subjects, double totalAmount, String date) {
+    public Enroll(int ref, Student student, double totalAmount, String date) {
         this.ref = ref;
         this.student = student;
-        this.subjects = subjects;
+        this.subjects = new ArrayList<>();
         this.totalAmount = totalAmount;
         this.date = date;
     }
@@ -79,16 +79,16 @@ public class Enroll {
         return faculty != null ? faculty.getCostForCredit() : 0.0;
     }
 
-
     @Override
     public String toString() {
-        return "Matricula{" +
-                "id=" + ref +
-                ", alumno=" + student +
-                ", asignaturas=" + subjects +
-                ", costoTotal=" + totalAmount +
-                ", fecha='" + date + '\'' +
+        return "Enroll{" +
+                "ref=" + ref +
+                ", student=" + student +
+                ", subjects=" + subjects +
+                ", totalAmount=" + totalAmount +
+                ", date='" + date + '\'' +
                 '}';
     }
+
 
 }

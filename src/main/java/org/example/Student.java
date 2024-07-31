@@ -13,8 +13,8 @@ import java.util.Map;
  */
 
 public class Student {
-
     private String name;
+
     private String lastName;
     private int code;
     private String email;
@@ -22,11 +22,10 @@ public class Student {
     private List<Subject> subjects;
     private Map<Subject, Float> grades;
 
-
     /**
      * Constructor
      */
-    public Student(String name, String lastName, int code, String email, Enroll enroll, List<Subject> subjects, Map<Subject, Float> grades) {
+    public Student(String name, String lastName, int code, String email) {
         this.name = name;
         this.lastName = lastName;
         this.code = code;
@@ -37,8 +36,8 @@ public class Student {
     }
 
 
-    //Getter and Setter
 
+    //Getter and Setter
     public String getName() {
         return name;
     }
@@ -95,8 +94,8 @@ public class Student {
         this.grades = grades;
     }
 
-    //Metods
 
+    //Metods
     public void enroll(Enroll enroll){
         this.enroll = enroll;
     }
@@ -118,16 +117,18 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Alumno{" +
-                "nombre='" + name + '\'' +
-                ", apellido='" + lastName + '\'' +
-                ", código=" + code +
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", code=" + code +
                 ", email='" + email + '\'' +
-                ", matricula=" + (enroll != null ? enroll.toString() : "null") +
-                ", asignaturas=" + subjects +
-                ", calificaciones=" + grades +
+                ", enroll=" + enroll +
+                ", subjects=" + subjects +
+                ", grades=" + grades +
                 '}';
     }
+
+
 
 
 }

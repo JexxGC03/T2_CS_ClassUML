@@ -12,16 +12,19 @@ public class Subject {
     private String description;
     private Faculty faculty;
     private List<Student> students;
+    private Classroom classroom;
 
 
     //Constructor
-    public Subject(String name, String code, int credits, Teacher teacher, String description, List<Student> students) {
+    public Subject(String name, String code, int credits, Teacher teacher, String description, Faculty faculty) {
         this.name = name;
         this.code = code;
         this.credits = credits;
         this.teacher = teacher;
         this.description = description;
+        this.faculty = faculty;
         this.students = new ArrayList<>();
+        this.classroom = null;
     }
 
 
@@ -96,18 +99,22 @@ public class Subject {
         }
     }
 
-
+    public void addClassroom(Classroom classroom) {
+        this.classroom = classroom;
+        classroom.addSubject(this);
+    }
 
     @Override
     public String toString() {
-        return "Asignatura{" +
-                "nombre='" + name + '\'' +
-                ", codigo='" + code + '\'' +
-                ", creditos=" + credits +
+        return "Subject{" +
+                "name='" + name + '\'' +
+                ", code='" + code + '\'' +
+                ", credits=" + credits +
                 ", teacher=" + teacher +
                 ", description='" + description + '\'' +
                 ", faculty=" + faculty +
                 ", students=" + students +
+                ", classroom=" + classroom +
                 '}';
     }
 

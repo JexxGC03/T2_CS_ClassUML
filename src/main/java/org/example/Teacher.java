@@ -11,7 +11,7 @@ public class Teacher {
     private List<Subject> subjects;
 
     //Constructor
-    public Teacher(String name, String lastName, String email, List<Subject> subjects) {
+    public Teacher(String name, String lastName, String email) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
@@ -66,12 +66,13 @@ public class Teacher {
 
     @Override
     public String toString() {
-        return "Profesor{" +
-                "nombre='" + name + '\'' +
-                ", apellido='" + lastName + '\'' +
+        return "Teacher{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
-                ", asignaturas=" + subjects +
+                ", subjects=" + subjects +
                 '}';
     }
+
 
 }

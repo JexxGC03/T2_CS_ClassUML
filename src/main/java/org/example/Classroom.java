@@ -33,11 +33,12 @@ public class Classroom {
 
     @Override
     public String toString() {
-        return "Aula{" +
-                "nombre='" + name + '\'' +
-                ", capacidad=" + capacity +
-                ", ubicacion='" + ubication + '\'' +
-                ", asignaturas=" + subjects +
+        return "Classroom{" +
+                "name='" + name + '\'' +
+                ", capacity=" + capacity +
+                ", ubication='" + ubication + '\'' +
+                ", subjects=" + subjects +
                 '}';
     }
+
 }
