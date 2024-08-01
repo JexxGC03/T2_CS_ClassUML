@@ -59,11 +59,11 @@ public class Teacher {
         subjects.add(subject);
     }
 
-    public void assignGrades(Subject subject, Student student, float grades) {
+    /*public void assignGrades(Subject subject, Student student, float grades) {
         if (subjects.contains(subject)) {
             subject.assignGrades(student, grades);
         }
-    }
+    }*/
 
     @Override
     public String toString() {

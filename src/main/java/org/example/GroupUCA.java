@@ -4,24 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GroupUCA {
-    public int gp;
-    public List<Subject> subjects;
-    public String schedule;
-    public Classroom classroom;
+    private int gp;
+    private List<Subject> subjects;
+    private String schedule;
+    private Classroom classroom;
 
-//Constructor
+
+    //Constructor
     public GroupUCA(int gp, String schedule, Classroom classroom) {
         this.gp = gp;
         this.schedule = schedule;
         this.classroom = classroom;
     }
 
-
     //Setters and Getters
+
     public String getSchedule() {
         return schedule;
     }
-
     public void setSchedule(String schedule) {
         this.schedule = schedule;
     }
@@ -48,6 +48,16 @@ public class GroupUCA {
 
     public void setClassroom(Classroom classroom) {
         this.classroom = classroom;
+    }
+
+    @Override
+    public String toString() {
+        return "GroupUCA{" +
+                "gp=" + gp +
+                ", subjects=" + subjects +
+                ", schedule='" + schedule + '\'' +
+                ", classroom=" + classroom +
+                '}';
     }
 
 }

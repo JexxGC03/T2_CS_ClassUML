@@ -8,7 +8,9 @@ import java.util.List;
 public class User {
     private String name;
     private String lastName;
+
     private int cc;
+
     private String email;
     private List<GroupUCA> groups;
     private String role;
@@ -16,7 +18,6 @@ public class User {
 
 
     //Constructor
-
     public User(String name, String lastName, int cc, String email, String role) {
         this.name = name;
         this.lastName = lastName;
@@ -69,10 +70,22 @@ public class User {
     public String getRole() {
         return role;
     }
+
     public void setRole(String role) {
         this.role = role;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", cc=" + cc +
+                ", email='" + email + '\'' +
+                ", groups=" + groups +
+                ", role='" + role + '\'' +
+                '}';
+    }
 
 
 

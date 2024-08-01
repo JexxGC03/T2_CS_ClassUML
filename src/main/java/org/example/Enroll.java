@@ -8,7 +8,7 @@ import java.util.List;
 public class Enroll {
 
     private int ref;
-    private Student student;
+    private User user;
     private double totalAmount;
     private String date;
 
@@ -16,20 +16,20 @@ public class Enroll {
 
     //Constructor
 
-    public Enroll(int ref, Student student, double totalAmount, String date) {
+    public Enroll(int ref, User user, double totalAmount, String date) {
         this.ref = ref;
-        this.student = student;
+        this.user = user;
         this.totalAmount = totalAmount;
         this.date = date;
         this.groups = new ArrayList<>();
     }
     //Getters and Setters
 
-    public Student getStudent() {
-        return student;
+    public User getUser() {
+        return user;
     }
-    public void setStudent(Student student) {
-        this.student = student;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public int getRef() {
