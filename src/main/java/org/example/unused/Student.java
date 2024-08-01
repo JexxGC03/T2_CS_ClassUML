@@ -1,4 +1,7 @@
-package org.example;
+package org.example.unused;
+
+import org.example.Enroll;
+import org.example.Subject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -102,7 +105,7 @@ public class Student {
 
     public void addSubject(Subject subject) {
         if(this.enroll == null){
-            System.out.println("You can't add subject, please pay your enroll ");
+            System.out.println("You can't addUser subject, please pay your enroll ");
         }
         this.subjects.add(subject);
     }

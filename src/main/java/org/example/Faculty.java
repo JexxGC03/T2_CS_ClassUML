@@ -53,7 +53,7 @@ public class Faculty {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Faculty{")
+        StringBuilder append = sb.append("Faculty{")
                 .append("facultyName='").append(facultyName).append('\'')
                 .append(", costForCredit=").append(costForCredit)
                 .append(", subjects=").append(subjects != null ? subjectsToString() : "null")

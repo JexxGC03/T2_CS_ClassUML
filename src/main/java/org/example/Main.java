@@ -3,7 +3,7 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        Faculty EngineerFaculty = new Faculty("Engineer", 284200);
+        /*Faculty EngineerFaculty = new Faculty("Engineer", 284200);
         Faculty BasicsSciences = new Faculty("Basis Sciences", 262200);
 
         Teacher teacher1 = new Teacher("Juan", "Perez", "jprez@ucatolica.edu.co");
@@ -28,9 +28,13 @@ public class Main {
         enroll1.addSubject(CT10071);
         enroll1.addSubject(CE05003);
 
-        enroll1.obtainTotalAmount();
+        enroll1.obtainTotalAmount();*/
 
 
+
+
+
+        /*
         System.out.println(EngineerFaculty);
         System.out.println(BasicsSciences);
         System.out.println(CT10071);
@@ -41,6 +45,6 @@ public class Main {
         System.out.println(student2);
         System.out.println(cls1);
         System.out.println(cls2);
-        System.out.println(enroll1);
+        System.out.println(enroll1);*/
     }
 }
